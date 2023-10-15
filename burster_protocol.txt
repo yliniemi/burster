@@ -1,0 +1,21 @@
+
+
+
+Packet looks like this
+
+0123456701234567012345670123456701234567012345670123456701234567012345670123456701234567012345670123456701234567012345670123456701234567012345670123456701234567012345670123456701234567
+BurstTester 0.01[pi][bi][pt][bl][in][ps][        padding until byte count full         ]
+
+
+pi = packet_index
+bi = burst_index
+pt = packet_number_total
+bl = burst_length
+in = interval
+ps = packet_size
+
+All these integers are sent as little endian uin32_t so that it's easy to decipher on the receiving end with little endian cpus
+I'm planning on using this software to test esp32 burst receiving cababilities and I want to make everything as easy as possible for that little microcontroller
+
+
+
